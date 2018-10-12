@@ -17,6 +17,8 @@
 		CF7AB0F42171355100576262 /* PodcastsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0F32171355100576262 /* PodcastsSearchController.swift */; };
 		CF7AB0F72171364000576262 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0F62171364000576262 /* Podcast.swift */; };
 		CF7AB0FA217156D000576262 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0F9217156D000576262 /* APIService.swift */; };
+		CF7AB0FD21715D5100576262 /* PodcastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7AB0FC21715D5100576262 /* PodcastCell.xib */; };
+		CF7AB0FF21715ED600576262 /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0FE21715ED600576262 /* PodcastCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		CF7AB0F32171355100576262 /* PodcastsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsSearchController.swift; sourceTree = "<group>"; };
 		CF7AB0F62171364000576262 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		CF7AB0F9217156D000576262 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		CF7AB0FC21715D5100576262 /* PodcastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcastCell.xib; sourceTree = "<group>"; };
+		CF7AB0FE21715ED600576262 /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
 		FBD4CEAB8BE13F83F4561926 /* Pods-AmiraclePodcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmiraclePodcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-AmiraclePodcast/Pods-AmiraclePodcast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,7 @@
 		CF7AB0DD216FFD2600576262 /* AmiraclePodcast */ = {
 			isa = PBXGroup;
 			children = (
+				CF7AB0FB21715D2800576262 /* Views */,
 				CF7AB0F8217156B600576262 /* API */,
 				CF7AB0F52171362900576262 /* Model */,
 				CF7AB0F22171352A00576262 /* Controllers */,
@@ -122,6 +127,15 @@
 				CF7AB0F9217156D000576262 /* APIService.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		CF7AB0FB21715D2800576262 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF7AB0FC21715D5100576262 /* PodcastCell.xib */,
+				CF7AB0FE21715ED600576262 /* PodcastCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +200,7 @@
 			files = (
 				CF7AB0E9216FFD2800576262 /* LaunchScreen.storyboard in Resources */,
 				CF7AB0E6216FFD2800576262 /* Assets.xcassets in Resources */,
+				CF7AB0FD21715D5100576262 /* PodcastCell.xib in Resources */,
 				CF7AB0E4216FFD2600576262 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +257,7 @@
 				CF7AB0F12170012600576262 /* MainTabBarController.swift in Sources */,
 				CF7AB0FA217156D000576262 /* APIService.swift in Sources */,
 				CF7AB0F72171364000576262 /* Podcast.swift in Sources */,
+				CF7AB0FF21715ED600576262 /* PodcastCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

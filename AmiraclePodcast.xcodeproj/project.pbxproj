@@ -16,6 +16,7 @@
 		CF7AB0F12170012600576262 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0F02170012600576262 /* MainTabBarController.swift */; };
 		CF7AB0F42171355100576262 /* PodcastsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0F32171355100576262 /* PodcastsSearchController.swift */; };
 		CF7AB0F72171364000576262 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0F62171364000576262 /* Podcast.swift */; };
+		CF7AB0FA217156D000576262 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0F9217156D000576262 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CF7AB0F02170012600576262 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CF7AB0F32171355100576262 /* PodcastsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsSearchController.swift; sourceTree = "<group>"; };
 		CF7AB0F62171364000576262 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		CF7AB0F9217156D000576262 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FBD4CEAB8BE13F83F4561926 /* Pods-AmiraclePodcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmiraclePodcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-AmiraclePodcast/Pods-AmiraclePodcast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 		CF7AB0DD216FFD2600576262 /* AmiraclePodcast */ = {
 			isa = PBXGroup;
 			children = (
+				CF7AB0F8217156B600576262 /* API */,
 				CF7AB0F52171362900576262 /* Model */,
 				CF7AB0F22171352A00576262 /* Controllers */,
 				CF7AB0DE216FFD2600576262 /* AppDelegate.swift */,
@@ -111,6 +114,14 @@
 				CF7AB0F62171364000576262 /* Podcast.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CF7AB0F8217156B600576262 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CF7AB0F9217156D000576262 /* APIService.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				CF7AB0E1216FFD2600576262 /* ViewController.swift in Sources */,
 				CF7AB0DF216FFD2600576262 /* AppDelegate.swift in Sources */,
 				CF7AB0F12170012600576262 /* MainTabBarController.swift in Sources */,
+				CF7AB0FA217156D000576262 /* APIService.swift in Sources */,
 				CF7AB0F72171364000576262 /* Podcast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

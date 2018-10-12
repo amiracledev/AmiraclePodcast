@@ -11,15 +11,15 @@ import Alamofire
 
 class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
     let cellID = "cellId"
-    let podcasts = [
-        Podcast.init(name: "Let's Test this out ", artistName: "Amir, Nickroo"), Podcast.init(name: "Testing this one ", artistName: "AmiracleDev")
+    var podcasts = [
+        Podcast.init(trackName: "Let's Test this out ", artistName: "Amir, Nickroo"), Podcast.init(trackName: "Testing this one ", artistName: "AmiracleDev")
     ]
-       //adding searchController
+    //adding searchController
     let searchController = UISearchController(searchResultsController: nil)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
         setupSearchBar()
         setupTableView()
     }
@@ -41,25 +41,17 @@ class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
     
     //MARK: Searchbar Text Entered
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        
-        //Itunes Api info
-        let url = "https://itunes.apple.com/search?term=\(searchText)"
-        Alamofire.request(url).response { (dataResponse) in
-            if let err = dataResponse.error {
-                print("Failed to contact itunes api", err)
-                return
-            }
-            guard let data = dataResponse.data else {
-                return
+        APIService.shared.fetchPodcasts(text: searchText) { (podcasts) in
+            self.podcasts = podcasts
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                
             }
             
-            let dumString = String(data: data, encoding: .utf8)
-            print(dumString ?? "")
         }
-        
-    print(searchText)
     }
+    
+    
     
     //MARK:- UITABLEVIEW
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,7 +61,7 @@ class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
         let podcast = self.podcasts[indexPath.row]
-        cell.textLabel?.text = "\(podcast.name)\n\(podcast.artistName)"
+        cell.textLabel?.text = "\(podcast.trackName ?? "")\n\(podcast.artistName ?? "")"
         cell.textLabel?.numberOfLines = -1
         cell.imageView?.image = UIImage(named: "appicon")
         return cell

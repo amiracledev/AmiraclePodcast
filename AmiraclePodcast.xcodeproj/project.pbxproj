@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D0A13A69E32F880EE2E7F9A /* Pods_AmiraclePodcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202374E227243D0D7C470F86 /* Pods_AmiraclePodcast.framework */; };
 		CF7AB0DF216FFD2600576262 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0DE216FFD2600576262 /* AppDelegate.swift */; };
 		CF7AB0E1216FFD2600576262 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0E0216FFD2600576262 /* ViewController.swift */; };
 		CF7AB0E4216FFD2600576262 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7AB0E2216FFD2600576262 /* Main.storyboard */; };
 		CF7AB0E6216FFD2800576262 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF7AB0E5216FFD2800576262 /* Assets.xcassets */; };
 		CF7AB0E9216FFD2800576262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7AB0E7216FFD2800576262 /* LaunchScreen.storyboard */; };
 		CF7AB0F12170012600576262 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0F02170012600576262 /* MainTabBarController.swift */; };
+		CF7AB0F42171355100576262 /* PodcastsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0F32171355100576262 /* PodcastsSearchController.swift */; };
+		CF7AB0F72171364000576262 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7AB0F62171364000576262 /* Podcast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		202374E227243D0D7C470F86 /* Pods_AmiraclePodcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmiraclePodcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5476B80F9A179A3082312FE9 /* Pods-AmiraclePodcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmiraclePodcast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AmiraclePodcast/Pods-AmiraclePodcast.debug.xcconfig"; sourceTree = "<group>"; };
 		CF7AB0DB216FFD2600576262 /* AmiraclePodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmiraclePodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7AB0DE216FFD2600576262 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF7AB0E0216FFD2600576262 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		CF7AB0E8216FFD2800576262 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF7AB0EA216FFD2800576262 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF7AB0F02170012600576262 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		CF7AB0F32171355100576262 /* PodcastsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsSearchController.swift; sourceTree = "<group>"; };
+		CF7AB0F62171364000576262 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		FBD4CEAB8BE13F83F4561926 /* Pods-AmiraclePodcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmiraclePodcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-AmiraclePodcast/Pods-AmiraclePodcast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D0A13A69E32F880EE2E7F9A /* Pods_AmiraclePodcast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58ECFB583932E07D43374B5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5476B80F9A179A3082312FE9 /* Pods-AmiraclePodcast.debug.xcconfig */,
+				FBD4CEAB8BE13F83F4561926 /* Pods-AmiraclePodcast.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D54F0EF8A1B5A0CB3935551 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				202374E227243D0D7C470F86 /* Pods_AmiraclePodcast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF7AB0D2216FFD2600576262 = {
 			isa = PBXGroup;
 			children = (
 				CF7AB0DD216FFD2600576262 /* AmiraclePodcast */,
 				CF7AB0DC216FFD2600576262 /* Products */,
+				58ECFB583932E07D43374B5A /* Pods */,
+				9D54F0EF8A1B5A0CB3935551 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +84,8 @@
 		CF7AB0DD216FFD2600576262 /* AmiraclePodcast */ = {
 			isa = PBXGroup;
 			children = (
+				CF7AB0F52171362900576262 /* Model */,
+				CF7AB0F22171352A00576262 /* Controllers */,
 				CF7AB0DE216FFD2600576262 /* AppDelegate.swift */,
 				CF7AB0E0216FFD2600576262 /* ViewController.swift */,
 				CF7AB0F02170012600576262 /* MainTabBarController.swift */,
@@ -67,6 +97,22 @@
 			path = AmiraclePodcast;
 			sourceTree = "<group>";
 		};
+		CF7AB0F22171352A00576262 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF7AB0F32171355100576262 /* PodcastsSearchController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CF7AB0F52171362900576262 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF7AB0F62171364000576262 /* Podcast.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF7AB0ED216FFD2800576262 /* Build configuration list for PBXNativeTarget "AmiraclePodcast" */;
 			buildPhases = (
+				6C7560B83EC2BAA2467F0C4D /* [CP] Check Pods Manifest.lock */,
 				CF7AB0D7216FFD2600576262 /* Sources */,
 				CF7AB0D8216FFD2600576262 /* Frameworks */,
 				CF7AB0D9216FFD2600576262 /* Resources */,
+				EEBE266C87A54CAF3C82C14F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +181,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C7560B83EC2BAA2467F0C4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AmiraclePodcast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEBE266C87A54CAF3C82C14F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AmiraclePodcast/Pods-AmiraclePodcast-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AmiraclePodcast/Pods-AmiraclePodcast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF7AB0D7216FFD2600576262 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7AB0F42171355100576262 /* PodcastsSearchController.swift in Sources */,
 				CF7AB0E1216FFD2600576262 /* ViewController.swift in Sources */,
 				CF7AB0DF216FFD2600576262 /* AppDelegate.swift in Sources */,
 				CF7AB0F12170012600576262 /* MainTabBarController.swift in Sources */,
+				CF7AB0F72171364000576262 /* Podcast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +373,7 @@
 		};
 		CF7AB0EE216FFD2800576262 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5476B80F9A179A3082312FE9 /* Pods-AmiraclePodcast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +392,7 @@
 		};
 		CF7AB0EF216FFD2800576262 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBD4CEAB8BE13F83F4561926 /* Pods-AmiraclePodcast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

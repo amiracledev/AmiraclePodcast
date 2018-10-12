@@ -35,7 +35,7 @@ class MainTabBarController: UITabBarController {
         let downloadImage = UIImage(named: "downloads")
         let searchImage = UIImage(named: "search")
         let favImage = UIImage(named: "favorites")
-        viewControllers = [generateNavController(with: ViewController(), title: "Downloads", image: downloadImage!), generateNavController(with: ViewController(), title: "Search", image: searchImage!), generateNavController(with: ViewController(), title: "Favorites", image: favImage!)]
+        viewControllers = [generateNavController(with: PodcastsSearchController(), title: "Search", image: searchImage!),generateNavController(with: ViewController(), title: "Downloads", image: downloadImage!), generateNavController(with: ViewController(), title: "Favorites", image: favImage!)]
     }
     
     //MARK:- Helper Functions

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PodcastCell: UITableViewCell {
     
@@ -19,7 +20,14 @@ class PodcastCell: UITableViewCell {
         didSet {
             trackNameLabel.text = podcast.trackName
             artistNameLabel.text = podcast.artistName
+            episodeLabel.text = "\(String(describing: podcast.trackCount ?? 0)) Episodes"
+          
+            guard let url = URL(string: podcast.artworkUrl1600 ?? "") else {
+                return
+            }
+            print(url, "url string")
             
+            podcastImgeView.sd_setImage(with: url, completed: nil)
         }
     }
     

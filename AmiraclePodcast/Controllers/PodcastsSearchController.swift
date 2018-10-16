@@ -11,9 +11,8 @@ import Alamofire
 
 class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
     let cellID = "cellId"
-    var podcasts = [
-        Podcast.init(trackName: "Let's Test this out ", artistName: "Amir, Nickroo"), Podcast.init(trackName: "Testing this one ", artistName: "AmiracleDev")
-    ]
+    var podcasts = [Podcast]()
+    
     //adding searchController
     let searchController = UISearchController(searchResultsController: nil)
     

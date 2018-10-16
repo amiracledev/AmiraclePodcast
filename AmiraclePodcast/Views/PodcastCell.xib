@@ -10,14 +10,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="135" id="j5J-9i-dI2" customClass="PodcastCell" customModule="AmiraclePodcast" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="639" height="135"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="169" id="j5J-9i-dI2" customClass="PodcastCell" customModule="AmiraclePodcast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="787" height="169"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j5J-9i-dI2" id="7eC-kV-1uc">
-                <rect key="frame" x="0.0" y="0.0" width="639" height="134.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j5J-9i-dI2" id="7eC-kV-1uc">
+                <rect key="frame" x="0.0" y="0.0" width="787" height="168.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="qUK-KL-v50">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qUK-KL-v50">
                         <rect key="frame" x="20" y="19" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="Lif-Kj-2rV"/>
@@ -25,22 +25,31 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="HTC-gH-aIL">
-                        <rect key="frame" x="132" y="19" width="507" height="61"/>
+                        <rect key="frame" x="132" y="52.5" width="627" height="64"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTQ-ZI-jJ8">
-                                <rect key="frame" x="0.0" y="0.0" width="507" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="627" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Ah3-Md-02H"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdR-iz-veM">
-                                <rect key="frame" x="0.0" y="22.5" width="507" height="19.5"/>
+                                <rect key="frame" x="0.0" y="22" width="627" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="bjR-kc-DhK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7h-W9-6IX">
-                                <rect key="frame" x="0.0" y="44" width="507" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Episode Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7h-W9-6IX">
+                                <rect key="frame" x="0.0" y="44" width="627" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="hkm-TU-IBQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -49,12 +58,11 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="HTC-gH-aIL" secondAttribute="bottom" constant="129.5" id="By1-Ox-ytz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="HTC-gH-aIL" secondAttribute="trailing" constant="8" id="2nb-Z8-UIY"/>
                     <constraint firstItem="qUK-KL-v50" firstAttribute="leading" secondItem="7eC-kV-1uc" secondAttribute="leadingMargin" id="FdT-pP-J7Y"/>
-                    <constraint firstAttribute="trailing" secondItem="HTC-gH-aIL" secondAttribute="trailing" id="a2F-hv-aNc"/>
+                    <constraint firstItem="HTC-gH-aIL" firstAttribute="centerY" secondItem="7eC-kV-1uc" secondAttribute="centerY" id="Jgv-sG-Ke5"/>
                     <constraint firstItem="qUK-KL-v50" firstAttribute="top" secondItem="7eC-kV-1uc" secondAttribute="topMargin" constant="8" id="hz8-8o-uSt"/>
-                    <constraint firstItem="HTC-gH-aIL" firstAttribute="leading" secondItem="qUK-KL-v50" secondAttribute="trailing" constant="12" id="iee-y4-3NV"/>
-                    <constraint firstItem="HTC-gH-aIL" firstAttribute="top" secondItem="qUK-KL-v50" secondAttribute="top" id="lKf-rL-Y6G"/>
+                    <constraint firstItem="HTC-gH-aIL" firstAttribute="leading" secondItem="qUK-KL-v50" secondAttribute="trailing" constant="12" id="xuh-4e-DB5"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -63,10 +71,7 @@
                 <outlet property="podcastImgeView" destination="qUK-KL-v50" id="ZVy-0y-3xE"/>
                 <outlet property="trackNameLabel" destination="bTQ-ZI-jJ8" id="a2F-9x-OsT"/>
             </connections>
-            <point key="canvasLocation" x="-333.60000000000002" y="8.5457271364317844"/>
+            <point key="canvasLocation" x="-175" y="12"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="appicon" width="60" height="60"/>
-    </resources>
 </document>

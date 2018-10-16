@@ -21,8 +21,8 @@ class PodcastCell: UITableViewCell {
             trackNameLabel.text = podcast.trackName
             artistNameLabel.text = podcast.artistName
             episodeLabel.text = "\(String(describing: podcast.trackCount ?? 0)) Episodes"
-          
-            guard let url = URL(string: podcast.artworkUrl1600 ?? "") else {
+          print(podcast.artworkUrl600 ?? "", "IMAGE URL")
+            guard let url = URL(string: podcast.artworkUrl600 ?? "") else {
                 return
             }
             print(url, "url string")

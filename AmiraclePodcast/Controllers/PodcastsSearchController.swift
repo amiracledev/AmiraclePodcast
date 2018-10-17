@@ -27,12 +27,14 @@ class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
     //MARK:- SETUP
     //MARK: Setup TableView
     fileprivate func setupTableView() {
+        tableView.tableFooterView = UIView()
         let nib = UINib(nibName: "PodcastCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellID)
     }
     
     //MARK: Setup SEARCHBAR
     fileprivate func setupSearchBar() {
+        self.definesPresentationContext = true
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.dimsBackgroundDuringPresentation = false
@@ -54,6 +56,27 @@ class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
     
     
     //MARK:- UITABLEVIEW
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let episodesController = EpisodesController()
+        let podcast = self.podcasts[indexPath.row]
+        episodesController.podcast = podcast
+       navigationController?.pushViewController(episodesController, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "Please enter search terms"
+        label.textAlignment = .center
+        label.font = UIFont.monospacedDigitSystemFont(ofSize: 18, weight: .semibold)
+        return label
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.podcasts.count > 0 ? 0 : 250
+        
+     
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return podcasts.count        }
     
@@ -62,9 +85,6 @@ class PodcastsSearchController: UITableViewController, UISearchBarDelegate {
 
         let podcast = self.podcasts[indexPath.row]
         cell.podcast = podcast
-//        cell.textLabel?.text = "\(podcast.trackName ?? "")\n\(podcast.artistName ?? "")"
-//        cell.textLabel?.numberOfLines = -1
-//        cell.imageView?.image = UIImage(named: "appicon")
         return cell
     }
     

@@ -21,14 +21,13 @@ class PodcastCell: UITableViewCell {
             trackNameLabel.text = podcast.trackName
             artistNameLabel.text = podcast.artistName
             episodeLabel.text = "\(String(describing: podcast.trackCount ?? 0)) Episodes"
-          print(podcast.artworkUrl600 ?? "", "IMAGE URL")
+         
             guard let url = URL(string: podcast.artworkUrl600 ?? "") else {
                 return
             }
-            print(url, "url string")
-            
             podcastImgeView.sd_setImage(with: url, completed: nil)
         }
     }
     
 }
+

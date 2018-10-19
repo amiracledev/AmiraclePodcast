@@ -20,9 +20,8 @@ fileprivate let cellId = "cellId"
     }
     
     
-    var episodes = [
-    Episode(title: "iouenriuniv"),
-        Episode(title: "eiwhdbciewhrbe")
+    var episodes =  [
+        Episode(title: "testing")
     ]
     
     override func viewDidLoad() {
